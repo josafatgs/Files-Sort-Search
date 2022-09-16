@@ -8,7 +8,7 @@ int main(){
 	const char archivo[15] = "bitacora.txt";
 
 	myArchivo.abrirArchivo(archivo);
-	myArchivo.imprimirArchivo();
+	myArchivo.ordenarRegistros();
 	myArchivo.cerrarArchivo();
 	
 	return 0;

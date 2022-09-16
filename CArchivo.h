@@ -5,10 +5,10 @@ class CArchivo{
 
 	public:
 
-		errno_t error; // Opcional
-		FILE* archivo;
-		char cadena[75];
-		//char* resultadoString;
+		errno_t error;                       // Opcional
+		FILE* archivo;                       // Descriptor
+		char cadena[75];				     // Lector de cadenas
+		std::vector<std::string> dataArr;    // Array para almacenar datos
 
 		void abrirArchivo(const char nombreArchivo[15]);
 		void cerrarArchivo();
@@ -16,7 +16,7 @@ class CArchivo{
 		void ordenarRegistros();
 		void guardarRegistros();
 		void buscarRegistros(std::string fechaInicial, std::string fechaFinal );
-		int contarRegistros();
+		void QuickSort();
 
 		CArchivo();
 		~CArchivo();
